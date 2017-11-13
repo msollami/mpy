@@ -1,21 +1,18 @@
 # Mpy
 
-## Overview
+## Installation
+
+To install, simply run
+
+    ```
+    pip install --process-dependency-links git+git://github.com/msollami/mpy.git@master
+    ```
 
 ## FAQ
 
-1. To install, run:
+1. To run tests:
 
     ```
-    git clone https://github.com/msollami/mpy.git
-    cd mpy
-    pip install .
-    ```
-
-2. To run tests:
-
-    ```
-    cd mpy
-    py.test
+    git clone https://github.com/msollami/mpy.git; cd mpy; py.test
     ```
 
