@@ -4,9 +4,8 @@
 
 To install run:
 
-	```
 	pip install --process-dependency-links git+git://github.com/msollami/mpy.git@master
-	```
+
 
 
 ## FAQ
@@ -18,4 +17,3 @@ To install run:
 	cd mpy
 	py.test
 	```
-
