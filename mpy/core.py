@@ -351,17 +351,22 @@ def Import(f):
 
     return res
 
-def Export(f, data, overwrite=False):
+def Export(filename, data, overwrite=False):
     """
     """
     if not overwrite:
-        if FileExistsQ(f):
+        if FileExistsQ(filename):
             raise ValueError("Target file exists.")
-
-    import json
-    with open(f, 'w') as outfile:
-        json.dump(data, outfile)
     
+    if isinstance(data, basestring):
+        with open(filename, 'w+') as f:
+            f.write(data)
+    elif isinstance(data, dict):
+        import json
+        with open(filename, 'w+') as f:
+            json.dump(data, f)
+    
+    return filename
 
 
 #
