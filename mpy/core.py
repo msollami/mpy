@@ -359,11 +359,11 @@ def Export(filename, data, overwrite=False):
             raise ValueError("Target file exists.")
     
     if isinstance(data, basestring):
-        with open(filename, 'w+') as f:
+        with open(filename, 'wb') as f:
             f.write(data)
     elif isinstance(data, dict):
         import json
-        with open(filename, 'w+') as f:
+        with open(filename, 'wb') as f:
             json.dump(data, f)
     
     return filename
